@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_240" data-name="Rectangle 240" width="25" height="25" transform="translate(1098 128)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon_rss" transform="translate(-1098 -128)" clip-path="url(#clip-path)">
+    <path id="rss-solid" d="M7.147,24a3.574,3.574,0,1,1-3.574-3.574A3.574,3.574,0,0,1,7.147,24Zm9.8,2.637A16.968,16.968,0,0,0,.937,10.622.892.892,0,0,0,0,11.514V14.2a.893.893,0,0,0,.831.894,12.5,12.5,0,0,1,11.65,11.65.893.893,0,0,0,.894.831h2.682A.892.892,0,0,0,16.95,26.634ZM25,26.65A25.017,25.017,0,0,0,.921,2.572.892.892,0,0,0,0,3.465V6.148a.9.9,0,0,0,.862.893A20.539,20.539,0,0,1,20.531,26.709a.9.9,0,0,0,.893.862h2.682A.892.892,0,0,0,25,26.65Z" transform="translate(1098 125.429)" fill="#fff" stroke="#707070" stroke-width="0.08"/>
+  </g>
+</svg>
