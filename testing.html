@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -58,34 +57,39 @@
         function loadAll(){
             loadGtm();
             loadPardot();
+            loadYoutubeVideo();
         }
         function loadGtm() {
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-T883LZ');
-            return true;
+            setTimeout(function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-T883LZ');
+                return true;
+            }, 3000);
         }
         function loadPardot(){
             piAId = '124902';
-            piCId = '102410';
+            piCId = '103305';
             piHostname = 'pi.pardot.com';
-
-            (function () {
-                function async_load() {
-                    var s = document.createElement('script');
-                    s.type = 'text/javascript';
+            
+            (function() {
+                function async_load(){
+                    var s = document.createElement('script'); s.type = 'text/javascript';
                     s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
-                    var c = document.getElementsByTagName('script')[0];
-                    c.parentNode.insertBefore(s, c);
+                    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
                 }
-                if (window.attachEvent) {
-                    window.attachEvent('onload', async_load);
-                } else {
-                    window.addEventListener('load', async_load, false);
-                }
+                if(window.attachEvent) { window.attachEvent('onload', async_load); }
+                else { window.addEventListener('load', async_load, false); }
             })();
+        }
+        function loadYoutubeVideo(){
+            setTimeout(function(){
+                $("#youtube1").html('<iframe width="560" height="315" class="embed-responsive-item lazyload" allowfullscreen src="//www.youtube.com/embed/6Qdvhs-sNcM"></iframe>');
+                $("#youtube2").html('<iframe width="560" height="315" class="embed-responsive-item lazyload" allowfullscreen src="https://www.youtube.com/embed/WL4F-2_0pW4"></iframe>');
+                $("#youtube3").html('<iframe width="560" height="315" class="embed-responsive-item lazyload" allowfullscreen src="https://www.youtube.com/embed/1sO6v4jxle8"></iframe>');
+            }, 3500);
         }
     </script>
     <!-- End Google Tag Manager -->
@@ -102,7 +106,7 @@
     </script>
 </head>
 
-<body id="body" onload="loadAlly()">
+<body id="body" onload="loadAll()">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T883LZ"
@@ -1512,7 +1516,7 @@
                             <h2 style="margin-bottom: 0px;">There has been an error</h2>
                             <p >Please submit your inquery again.</p>
                         </div>
-                        <form id="advice-form" action="http://go.updates.iata.org/l/123902/2022-07-15/gt6qtk" method="post" class="needs-validation" novalidate>
+                        <form id="advice-form" action="https://go.updates.iata.org/l/123902/2022-07-15/gt6qtk" method="post" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-12 col-md-12 col-lg-12">
                                     <div class="row">
@@ -1969,7 +1973,7 @@
 
 
 
-                        <form id="covid-form" action="http://go.updates.iata.org/l/123902/2022-07-15/gt6qtn" method="post" class="needs-validation" novalidate>
+                        <form id="covid-form" action="https://go.updates.iata.org/l/123902/2022-07-15/gt6qtn" method="post" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="form-group col-12 col-md-6">
                                     <label for="inputFirstName">First Name</label>
@@ -2303,11 +2307,9 @@
                     </div>
                     <div class="col-12 col-lg-8 h-100 order-first order-lg-last mb-3 mb-lg-0">
                         <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/6Qdvhs-sNcM"
-                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#FF0000;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/6Qdvhs-sNcM?autoplay=1><img src=https://img.youtube.com/vi_webp/6Qdvhs-sNcM/maxresdefault.webp alt='IATA Training?'><span>&#x25BA;</span></a>"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    title="IATA Training" frameborder="0" allowfullscreen>
-                            </iframe>
+                            <div id="youtube1">
+                                <img src="https://img.youtube.com/vi_webp/6Qdvhs-sNcM/maxresdefault.webp" alt='IATA Training?' loading="lazy"/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2374,11 +2376,9 @@
 
                     <div class="col-12 col-lg-8 h-100 order-first order-lg-last mb-3 mb-lg-0">
                         <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WL4F-2_0pW4"
-                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#FF0000;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/WL4F-2_0pW4?autoplay=1><img src=https://img.youtube.com/vi_webp/WL4F-2_0pW4/hqdefault.webp alt='IATA Training | Route Forecasting and Development'><span>&#x25BA;</span></a>"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    title="IATA Training" frameborder="0" allowfullscreen>
-                            </iframe>
+                            <div id="youtube2">
+                                <img src="https://img.youtube.com/vi_webp/WL4F-2_0pW4/hqdefault.webp" alt='IATA Training | Route Forecasting and Development' loading="lazy" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2445,11 +2445,9 @@
                     </div>
                     <div class="col-12 col-lg-8 h-100 order-first order-lg-last mb-3 mb-lg-0">
                         <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1sO6v4jxle8"
-                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#FF0000;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/1sO6v4jxle8?autoplay=1><img src=https://img.youtube.com/vi_webp/1sO6v4jxle8/hqdefault.webp alt='IATA Training | Student Testimonials'><span>&#x25BA;</span></a>"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    title="IATA Training" frameborder="0" allowfullscreen>
-                            </iframe>
+                            <div id="youtube3">
+                                <img src="https://img.youtube.com/vi_webp/1sO6v4jxle8/hqdefault.webp" alt='IATA Training | Student Testimonials' loading="lazy" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3048,7 +3046,7 @@
 <!-- <script type="text/javascript" src="js/scripts.min.js"></script> -->
 
 <!-- Scripts PRODUCTION-->
-<script type="text/javascript" src="https://go.updates.iata.org/l/123902/2022-07-19/gtdgqc/123902/1658208085V6nbLGZ8/scripts.min.js" defer></script>
+<script type="text/javascript" src="https://go.updates.iata.org/l/123902/2022-07-19/gtdgqc/123902/1658208085V6nbLGZ8/scripts.min.js" async defer></script>
 <script>
     (function () {
         if (typeof EventTarget !== "undefined") {
